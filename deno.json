@@ -1,0 +1,22 @@
+{
+  "name": "@strootje/hrelpers",
+  "exports": {
+    "./api": "./mod.api.ts",
+    "./fetch": "./mod.fetch.ts"
+  },
+  "version": "0.1.0",
+
+  "imports": {
+    "@standard-schema/spec": "jsr:@standard-schema/spec@^1.0.0",
+    "@std/expect": "jsr:@std/expect@^1.0.16",
+    "valibot": "npm:valibot@^1.1.0"
+  },
+
+  "fmt": {
+    "lineWidth": 120
+  },
+
+  "test": {
+    "include": ["*.tests.ts"]
+  }
+}
