@@ -70,11 +70,11 @@ const requestInitBuilder = <TIn extends SS>(
   }),
 });
 
-const method = (method: "get" | "post") => (endpoint: string) => {
+const method = (method: "get" | "post") => (endpoint: string): ReturnType<typeof requestInitBuilder> => {
   return requestInitBuilder(endpoint, undefined, () => ({ method }));
 };
 
 export const methods = {
   get: method("get"),
   post: method("post"),
-};
+} as const;
